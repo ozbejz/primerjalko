@@ -1,10 +1,10 @@
 {/* git commit -m d */}
-{/*import { useState } from "react";
+import { useState } from "react";
 import $ from "jquery";
 import Navbar from './Navbar';
 import Home from './Home';
 import Kategorije from './Kategorije';
-
+{/*
 function App() {
   return (
     <div className="App">
