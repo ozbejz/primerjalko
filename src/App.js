@@ -1,6 +1,6 @@
 import { useState } from "react";
 import $ from "jquery";
-{/*import Navbar from './Navbar';
+import Navbar from './Navbar';
 import Home from './Home';
 import Kategorije from './Kategorije';
 
@@ -20,9 +20,9 @@ function App() {
 }
 
 export default App;
-*/}
 
 
+{/*
   
 function App() {
     const [name, setName] = useState("");
@@ -62,3 +62,4 @@ function App() {
 }
   
 export default App;
+*/}
