@@ -1,4 +1,5 @@
-import { useState } from "react";
+{/* git commit -m d */}
+{/*import { useState } from "react";
 import $ from "jquery";
 import Navbar from './Navbar';
 import Home from './Home';
@@ -21,8 +22,8 @@ function App() {
 
 export default App;
 
+*/}
 
-{/*
   
 function App() {
     const [name, setName] = useState("");
@@ -62,4 +63,3 @@ function App() {
 }
   
 export default App;
-*/}
