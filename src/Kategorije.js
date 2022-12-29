@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Kategorije = () =>{
   const [kategorije, setKategorije] = useState([
@@ -8,12 +9,15 @@ const Kategorije = () =>{
     ])
     return (
       <nav className="Kategorije">
-        <div class="dropdown">
-        <button class="dropbtn">Kategorije</button>
-        <div class="dropdown-content">
+        <div className="dropdown">
+        <button className="dropbtn">Kategorije</button>
+        <div className="dropdown-content">
             {kategorije.map((kat)=>(
                 <div key={kat.id}>
-                    <a href = {kat.nav}>{kat.ime}</a>
+                  <Link to={`/kategorije/${kat.id}`}>
+                    <h2>{kat.ime}</h2>
+                  </Link>
+                  
                 </div>
             ))}
         </div>

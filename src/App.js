@@ -1,27 +1,37 @@
 import { useState } from "react";
 import $ from "jquery";
-{/*import Navbar from './Navbar';
+import Navbar from './Navbar';
 import Home from './Home';
 import Kategorije from './Kategorije';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import KatDetails from "./KatDetails";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      <Kategorije></Kategorije>
-      <Home></Home>
-      <div className='content'>
-
-
-      </div>
-
-    </div>
+      <Router>
+        
+        <div className="App">
+        <Navbar></Navbar>
+        
+        <Kategorije></Kategorije>
+            <div className='content'>
+                <Switch>
+                    <Route exact path="/">
+                        <Home></Home>
+                    </Route>
+                    <Route path="/kategorije/:id">
+                        <KatDetails></KatDetails>
+                    </Route>
+                </Switch>
+            </div>
+        </div>
+    </Router>
   );
 }
 
 export default App;
-*/}
 
+{/*
 
   
 function App() {
@@ -62,3 +72,4 @@ function App() {
 }
   
 export default App;
+*/}

@@ -6,6 +6,10 @@
   color:#333;
 }
 
+h2{
+  text-align: center;
+}
+
 .Navbar{
   padding: 20px;
   display: flex;

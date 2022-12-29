@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () =>{
   return (
     <nav className="Navbar">
-        <h1> <a href = '/'>Primerjalko</a></h1>
+        <h1> <Link to = '/'>Primerjalko</Link></h1>
         <div className="links">
-            <a href='/Prijava.js'>Prijava</a>
+            <Link to='/prijava'>Prijava</Link>
         </div>
         
     </nav>
