@@ -7,6 +7,8 @@ const Kategorije = () =>{
     {ime: "Bela tehnika", nav: "belatehnika", stIzdelkov: 30, id:2},
     {ime: "Telefonija", nav: "telefon", stIzdelkov: 10, id:3}
     ])
+
+    
     return (
       <nav className="Kategorije">
         <div className="dropdown">
@@ -17,7 +19,6 @@ const Kategorije = () =>{
                   <Link to={`/kategorije/${kat.nav}`}>
                     <h2>{kat.ime}</h2>
                   </Link>
-                  
                 </div>
             ))}
         </div>

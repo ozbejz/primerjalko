@@ -3,52 +3,72 @@
   {
    "ime": "Samsung Galaxy A13 2022 mobilni telefon, 3GB/32GB, črn",
    "cena": "159,90 €",
-   "image": "https://www.mimovrste.com/i/79191656/100"
+   "opis": "Mobilni telefon Samsung Galaxy A13 odlikuje 6,6-palčni (16,8 cm) zaslon TFT z visoko ločljivostjo Full HD+ (2408×1080) in zaščito Gorilla Glass 5. Poganja ga 8-jedrni procesor Samsung Exynos 850, zmogljivost pomnilnika 3 GB/32 GB z možnostjo razširitve do 1 TB, napreden operacijski sistem Android z One UI 4.1, Dual SIM, reža za pomnilniško kartico microSDXD. Štiri kamere z ločljivostjo 50 + 5 + 2 + 2 MP, sprednja kamera 8 MP. Baterija z zmogljivostjo 5000 mAh s podporo za 15 W hitro polnjenje, stranski čitalnik prstnih odtisov, 3,5 mm priključek za slušalke.",
+   "image": "https://www.mimovrste.com/i/79191656/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/samsung-galaxy-a13-2022-mobilni-telefon-3gb-32gb-crn"
   },
   {
    "ime": "Samsung Galaxy A53 5G mobilni telefon, 6GB/128GB, črn",
    "cena": "389,90 €",
-   "image": "https://www.mimovrste.com/i/79491602/100"
+   "opis": "Mobilni telefon Galaxy A53 5G odlikuje vrhunski SuperAMOLED zaslon s kaljenim steklom Gorilla Glass 5, visoko ločljivostjo Full HD+ in frekvenco osveževanja kar 120 Hz. Poganja ga zmogljiv 8-jedrni 5nm procesor Samsung Exynos 1280 s povezljivostjo 5G, zmogljivost pomnilnika 6 GB/128 GB z možnostjo razširitve do 1 TB. Nameščen je napreden operacijski sistem Android z uporabniškim vmesnikom One UI 4.1. Odlikuje pa ga še dvojni SIM, hibridna reža za pomnilniške kartice microSDXD. Opremljen je s štirimi kamerami ločljivosti 64 + 12 + 5 + 5 MP, sprednjo kamero 32 MP. Baterija s kapaciteto 5000 mAh s podporo za hitro polnjenje 25 W, čitalnik prstnih odtisov, tehnologija NFC, zaščita IP67.",
+   "image": "https://www.mimovrste.com/i/79491602/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/samsung-galaxy-a53-5g-mobilni-telefon-6gb-128gb-crn"
   },
   {
    "ime": "Xiaomi Redmi 9A pametni telefon, 2GB+32GB, 4G-LTE, zelen",
    "cena": "129 €",
-   "image": "https://www.mimovrste.com/i/49754873/100"
+   "opis": "Pametni telefon Redmi 9A odlikuje 16,59 cm (6,53\") velik IPS zaslon v ločljivosti 1600 × 720. Opremljen je z delovnim pomnilnikom kapacitete 2 GB in notranjim pomnilnikom za shranjevanje s kapaciteto 32 GB. Za brezhibno delo in zabavo pa bo poskrbel tudi zmogljiv 8-jedrni procesor.",
+   "image": "https://www.mimovrste.com/i/49754873/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/xiaomi-redmi-9a-pametni-telefon-2gb-32gb-4g-lte-zelen"
   },
   {
    "ime": "Xiaomi Redmi 10C mobilni telefon, 4GB/64GB, moder",
    "cena": "189 €",
-   "image": "https://www.mimovrste.com/i/81078527/100"
+   "opis": "Telefon Redmi 10C vsebuje 17 cm (6,7\") velik zaslon IPS z ločljivostjo 1650 × 720, steklo Corning Gorilla Glass, operacijski sistem Android z MIUI 13, zmogljiv 8-jedrni procesor Qualcomm Snapdragon 680, 4 GB/64 GB, Dual SIM, reža za pomnilniško kartico. Dvojna širokokotna kamera z globinskim objektivom 50 MP + 2 MP, kamera za selfije 5 MP. Dolga avtonomija baterije s 5000 mAh, 18 W hitro polnjenje, bralnik prstnih odtisov in odklepanje z obrazom, 3,5 mm priključek za slušalke. Masa 190 g.",
+   "image": "https://www.mimovrste.com/i/81078527/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/xiaomi-redmi-10c-mobilni-telefon-4gb-64gb-moder"
   },
   {
    "ime": "Xiaomi Redmi Note 11S pametni telefon, 6 GB/128 GB, siv",
    "cena": "260,99 €",
-   "image": "https://www.mimovrste.com/i/78950334/100"
-  },
-  {
-   "ime": "Xiaomi Redmi 10C mobilni telefon, 4GB/64GB, siv",
-   "cena": "189 €",
-   "image": "https://www.mimovrste.com/i/81085869/100"
+   "opis": "Xiaomi Redmi Note 11S 4 G predstavlja kombinacijo 6 GB RAM-a in 128 GB notranjega pomnilnika. Poleg tega je naprava opremljena tudi z glavno kamero 108 MP na zadnji strani, kar omogoča brezhibne fotografije. 5000 mAh baterija omogoča dolgotrajno uporabo.",
+   "image": "https://www.mimovrste.com/i/78950334/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/xiaomi-redmi-note-11s-pametni-telefon-6-gb-128-gb-siv"
   },
   {
    "ime": "Apple iPhone 11 mobilni telefon, 64GB, bel",
    "cena": "556 €",
-   "image": "https://www.mimovrste.com/i/44185745/100"
+   "opis": "15,4 cm (6,1’’) Liquid Retina HD TrueTone zaslon z ločljivostjo 1792×828 px, iOS 13 izjemno močnim čipom A13 Bionic z naprednim strojnim učenjem, 64 GB pomnilnika, Dual SIM. Dvojna ultra široka kamera z ločljivostjo 12 + 12 Mpx in izboljšanim nočnim načinom, 12Mpx TrueDepth selfie kamera. Brezžično in hitro polnjenje, Face ID. Zaščita IP68, Dolby Atmos.",
+   "image": "https://www.mimovrste.com/i/44185745/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/apple-iphone-11-mobilni-telefon-64gb-bel"
+  },
+  {
+   "ime": "Xiaomi Redmi 10C mobilni telefon, 4GB/64GB, siv",
+   "cena": "189 €",
+   "opis": "Telefon Redmi 10C vsebuje 17 cm (6,7\") velik zaslon IPS z ločljivostjo 1650 × 720, steklo Corning Gorilla Glass, operacijski sistem Android z MIUI 13, zmogljiv 8-jedrni procesor Qualcomm Snapdragon 680, 4 GB/64 GB, Dual SIM, reža za pomnilniško kartico. Dvojna širokokotna kamera z globinskim objektivom 50 MP + 2 MP, kamera za selfije 5 MP. Dolga avtonomija baterije s 5000 mAh, 18 W hitro polnjenje, bralnik prstnih odtisov in odklepanje z obrazom, 3,5 mm priključek za slušalke. Masa 190 g.",
+   "image": "https://www.mimovrste.com/i/81085869/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/xiaomi-redmi-10c-mobilni-telefon-4gb-64gb-siv"
+  },
+  {
+   "ime": "Oppo A74 pametni telefon, 4 GB/128 GB, črn",
+   "cena": "140,99 €",
+   "opis": "Pametni telefon Oppo A74 se ponaša 16,3 cm AMOLED zaslonom. Zajemite kakovostne fotografije s trojno zadnjo kamero (48 MP + 2 MP + 2 MP), sprednja kamera (16 MP) pa bo poskrbela za brezhibne portrete. Zmogljiv procesor Qualcomm SM6115 Snapdragon 662 bo v kombinaciji s 4 GB delovnega pomnilnika in 128 GB notranjega pomnilnika poskrbel za nemoteno delovanje naprave.",
+   "image": "https://www.mimovrste.com/i/63478779/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/oppo-a74-pametni-telefon-4-gb128-gb-crn"
+  },
+  {
+   "ime": "Samsung Galaxy A13 2022 mobilni telefon, 4GB/128GB, črn",
+   "cena": "229,90 €",
+   "opis": "Mobilni telefon Samsung Galaxy A13 odlikuje 6,6-palčni (16,8 cm) zaslon TFT z visoko ločljivostjo Full HD+ (2408×1080) in zaščito Gorilla Glass 5. Poganja ga 8-jedrni procesor Samsung Exynos 850, zmogljivost pomnilnika 4 GB/128 GB z možnostjo razširitve do 1 TB, napreden operacijski sistem Android z One UI 4.1, Dual SIM, reža za pomnilniško kartico microSDXD. Štiri kamere z ločljivostjo 50 + 5 + 2 + 2 MP, sprednja kamera 8 MP. Baterija z zmogljivostjo 5000 mAh s podporo za 15 W hitro polnjenje, stranski čitalnik prstnih odtisov, 3,5 mm priključek za slušalke.",
+   "image": "https://www.mimovrste.com/i/79191656/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/samsung-galaxy-a13-2022-mobilni-telefon-4gb-128gb-crn"
   },
   {
    "ime": "Samsung Galaxy A04s mobilni telefon, 3GB/32GB, bel + Galaxy Buds2 brezžične slušalke, grafitne",
    "cena": "169,90 €",
-   "image": "https://www.mimovrste.com/i/92940457/100"
-  },
-  {
-   "ime": "Oppo A74 pametni telefon, 4 GB/128 GB, črn",
-   "cena": "142,50 €",
-   "image": "https://www.mimovrste.com/i/63478779/100"
-  },
-  {
-   "ime": "Apple iPhone 11 mobilni telefon, 64GB, črn",
-   "cena": "556 €",
-   "image": "https://www.mimovrste.com/i/44185744/100"
+   "opis": "Paket Samsung pametnega telefona Galaxy A04s in brezžičnih slušalk Galaxy Buds2. Mobilni telefon ima 16,51 cm (6,5\") velik TFT zaslon z ločljivostjo 1600×720 in 8-jedrni procesor Samsung Exynos 850. Vsebuje 3GB RAM, 64 GB notranji spomin, Dual SIM in režo za pomnilniško kartico microSDXC. Ponaša se z zadnjo kamero z ločljivostjo 50 + 2 + 2 Mpx, 5 Mpx sprednjo kamero in baterija z visoko kapaciteto 5.000 mAh. Brezžične slušalke Galaxy Buds2 se ponašajo z uravnoteženim zvokom, udobnim prileganjem in zmogljivo baterijo. Funkcija aktivnega izničevanja zvoka pa bo zmanjšala hrup v ozadju do 98 % za popolno poglobitev v svet glasbe, iger ali zvočnih knjig.",
+   "image": "https://www.mimovrste.com/i/92940457/100",
+   "image_url": "https://www.mimovrste.com/mobilni-telefoni/samsung-galaxy-a04s-mobilni-telefon-3gb-32gb-bel-galaxy-buds2-brezzicne-slusalke-grafitne"
   }
  ]
 }

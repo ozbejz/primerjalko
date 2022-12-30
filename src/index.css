@@ -1,13 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@100&display=swap');
 
 *{
   margin: 0;
-  font-family:'Roboto Mono';
+  font-family:'Roboto', sans-serif;;
   color:#333;
 }
 
 h2{
   text-align: center;
+}
+
+img{
+  vertical-align: middle;
+}
+
+.opis{
+  display: flex;
+  align-items: center;
+}
+
+.izdelek{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  font-size: small;
+  margin: 10px auto;
+  width: 40%;
+  padding: 10px;
+}
+
+.izdelek:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .Navbar{
@@ -21,6 +45,7 @@ h2{
 
 .Navbar .links{
   margin-left: auto;
+  background-color: rgb(66, 167, 116);
 }
 
 .Navbar h1{
@@ -32,12 +57,18 @@ content{
   padding: 20px;
 }
 
-a{
-  margin: 10px;
+.nov{
+  margin: 1px;
   color: white;
-  background-color: rgb(66, 167, 116);
   border-radius: 5px;
-  text-decoration:none
+  text-decoration:none;
+  padding: 10px;
+  margin-left: auto;
+  background-color: rgb(66, 167, 116);
+}
+
+.linkDoIzd{
+  text-decoration: none;
 }
 
 .dropbtn {

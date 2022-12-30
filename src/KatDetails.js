@@ -4,7 +4,8 @@ import { useParams } from "react-router";
 const KatDetails = () => {
     const { id } = useParams();
     const [izdelki, setIzdelki] = useState(null);
-    let link = 'https://api.jsonbin.io/v3/b/63adbdbc01a72b59f23bc93d';
+    let link = 'https://api.jsonbin.io/v3/b/63aedeaf01a72b59f23c674f';
+    let izdelek;
     useEffect(() => {
         fetch(link)
           .then(res => {
@@ -12,18 +13,21 @@ const KatDetails = () => {
           })
           .then(data => {
             let { record } = data;
-            let { telefon } = record;
-            console.log(data.telefon);
-            setIzdelki(telefon);
-            
+            if(record[`${id}`])
+              izdelek = record[`${id}`];
+            console.log('izdelek: ',izdelek);
+            setIzdelki(izdelek);
           })
-      }, [])
-
-    return ( 
+      }, [id]);
+    return (
         <div className="kat-details">
             {izdelki && izdelki.map((izd)=>(
-                <div key={izd.ime}>
-                  <h2>{izd.ime}</h2>
+                <div className="izdelek" key={izd.ime}>
+                  <a className="linkDoIzd" href = {izd.image_url}><h2>{izd.ime}</h2></a>
+                  <div className="opis">
+                    <img src = {izd.image}></img>
+                    <div className="cena">{izd.cena}</div>
+                  </div>
                 </div>
             ))}
         </div>
