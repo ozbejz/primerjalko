@@ -23,7 +23,7 @@ const KatDetails = () => {
         <div className="kat-details">
             {izdelki && izdelki.map((izd)=>(
                 <div className="izdelek" key={izd.ime}>
-                  <a className="linkDoIzd" href = {izd.image_url}><h2>{izd.ime}</h2></a>
+                  <a className="linkDoIzd" href = {izd.image_url}><h4>{izd.ime}</h4></a>
                   <div className="opis">
                     <img src = {izd.image}></img>
                     <div className="cena">{izd.cena}</div>
