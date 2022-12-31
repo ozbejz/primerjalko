@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Kategorije = () =>{
   const [kategorije, setKategorije] = useState([
-    {ime: "Racunalnistvo", nav: "racunalnistvo", stIzdelkov: 20, id:1},
+    {ime: "Prenosniki", nav: "racunalnistvo", stIzdelkov: 20, id:1},
     {ime: "Bela tehnika", nav: "belatehnika", stIzdelkov: 30, id:2},
     {ime: "Telefoni", nav: "telefon", stIzdelkov: 10, id:3}
     ])

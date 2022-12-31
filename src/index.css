@@ -97,11 +97,14 @@ a{
   padding: 10px;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   color: #ddd;
   position: absolute;
   display: inline-block;
   background-color: rgb(226, 216, 216);
   border-radius: 5px;
+}
+
+.obvestila{
+  text-align: center;
 }
