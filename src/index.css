@@ -108,3 +108,14 @@ a{
 .obvestila{
   text-align: center;
 }
+
+form {
+  max-width: 64em;
+  margin: auto;
+  text-align: center;
+}
+
+.visible{
+  text-decoration: none;
+  color: rgb(214, 111, 111);
+}

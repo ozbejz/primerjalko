@@ -5,6 +5,9 @@ import Home from './Home';
 import Kategorije from './Kategorije';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import KatDetails from "./KatDetails";
+import Prijava from "./Prijava"
+import Registracija from "./Registracija";
+import RegUspensa from "./RegUspesna";
 
 function App() {
   return (
@@ -12,7 +15,7 @@ function App() {
         
         <div className="App">
         <Navbar></Navbar>
-        
+
         <Kategorije></Kategorije>
             <div className='content'>
                 <Switch>
@@ -22,9 +25,18 @@ function App() {
                     <Route path="/kategorije/:id">
                         <KatDetails></KatDetails>
                     </Route>
+                    <Route path="/registracija">
+                        <Registracija/>
+                    </Route>
                 </Switch>
             </div>
         </div>
+       <Route path="/prijava">
+            <Prijava></Prijava>
+        </Route>
+        <Route path="/uspesno">
+            <RegUspensa></RegUspensa>
+        </Route>
     </Router>
   );
 }
