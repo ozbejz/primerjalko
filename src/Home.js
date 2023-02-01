@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
+import Kategorije from "./Kategorije";
 
 function Home(){
-    
-
-
     return(
-        <div>
-            
-        </div>
+        <Kategorije></Kategorije>
     );
 }
 

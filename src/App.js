@@ -8,6 +8,8 @@ import KatDetails from "./KatDetails";
 import Prijava from "./Prijava"
 import Registracija from "./Registracija";
 import RegUspensa from "./RegUspesna";
+import PrijavaUspesna from "./PrijavaUspesna";
+import AdminPanel from "./AdminPanel";
 
 function App() {
   return (
@@ -16,7 +18,6 @@ function App() {
         <div className="App">
         <Navbar></Navbar>
 
-        <Kategorije></Kategorije>
             <div className='content'>
                 <Switch>
                     <Route exact path="/">
@@ -34,8 +35,14 @@ function App() {
        <Route path="/prijava">
             <Prijava></Prijava>
         </Route>
-        <Route path="/uspesno">
+        <Route path="/uspesna-registracija">
             <RegUspensa></RegUspensa>
+        </Route>
+        <Route path="/uspesna-prijava">
+            <PrijavaUspesna></PrijavaUspesna>
+        </Route>
+        <Route path="/admin-panel">
+            <AdminPanel></AdminPanel>
         </Route>
     </Router>
   );
