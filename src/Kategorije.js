@@ -1,21 +1,26 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Kategorije = () =>{
-  const [kategorije, setKategorije] = useState([
-    {ime: "Prenosniki", nav: "racunalnistvo", stIzdelkov: 20, id:1},
-    {ime: "Bela tehnika", nav: "belatehnika", stIzdelkov: 30, id:2},
-    {ime: "Telefoni", nav: "telefon", stIzdelkov: 10, id:3}
-    ])
+  const [category, setCategory] = useState([]);
+    useEffect(()=>{
+        const getcategory = async()=>{
+            const res = await fetch('http://localhost:80/primerjalko-server/kategorije.php');
+            const getdata = await res.json();
+            setCategory(getdata);
+        }
+        getcategory();
+    }, [])
     return (
       <nav className="Kategorije">
         <div className="dropdown">
           <h2 className="kat">Kategorije</h2>
           <div>
-              {kategorije.map((kat)=>(
-                  <div key={kat.id}>
-                    <Link to={`/kategorije/${kat.nav}`}>
-                      <h3>{kat.ime}</h3>
+              {category.map((cat)=>(
+                  <div key={cat.IdKategorija}>
+                    <Link to={`/kategorije/${cat.IdKategorija}`}>
+                      <h3>{cat.naziv}</h3>
                     </Link>
                   </div>
               ))}

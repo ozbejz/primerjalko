@@ -9,9 +9,13 @@
   font-size: 25px;
 }
 
+body{
+  background-color: #f1f0ee;
+}
+
 h2{
   text-align: center;
-  color: rgb(175, 120, 120);;
+  color: rgb(175, 120, 120);
 }
 
 h3{
@@ -42,7 +46,7 @@ img{
   border-radius: 5px;
   font-size: small;
   margin: 10px auto;
-  width: 40%;
+  width: 20%;
   padding: 10px;
 }
 
@@ -80,7 +84,6 @@ img{
   text-decoration:none;
   padding: 10px;
   margin-left: auto;
-  background-color: white;
 }
 
 a{
@@ -113,6 +116,15 @@ form {
   max-width: 64em;
   margin: auto;
   text-align: center;
+}
+
+.adminform{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 64em;
+  margin: auto;
+  background-color: rgb(226, 216, 216);
 }
 
 .visible{
