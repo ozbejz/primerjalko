@@ -10,8 +10,23 @@ import PrijavaUspesna from "./PrijavaUspesna";
 import AdminPanel from "./AdminPanel";
 import IzdDetails from "./IzdDetails";
 import NotFound from "./NotFound";
+import { useEffect, useState } from 'react';
 
 function App() {
+    /*
+    const [prijavljen, setPrijavljen] = useState(false);
+    useEffect(() => {
+        const getprijavljen = async()=>{
+            let req = new Request("http://localhost:80/primerjalko-server/prijavljen.php", {
+            method: 'POST',
+            });
+            const res = await fetch(req);
+            const getdata = await res.json();
+            setPrijavljen(getdata);
+            console.log(getdata);
+        }
+        getprijavljen();
+    }, []);*/
   return (
       <Router>
         <Navbar></Navbar>

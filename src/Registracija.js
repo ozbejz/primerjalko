@@ -1,5 +1,5 @@
 const Registracija = () => {
-    return ( 
+    return (
         <div>
             <form method="post" action="http://localhost:80/primerjalko-server/process-registracija.php">
                 Ime<br/><input type="text" name="ime" required></input><br/>

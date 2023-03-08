@@ -13,6 +13,12 @@ body{
   background-color: #f1f0ee;
 }
 
+input{
+  border-radius: 4px;
+  padding: 1px;
+  margin: 5px;
+}
+
 h2{
   text-align: center;
   color: rgb(175, 120, 120);
@@ -40,13 +46,19 @@ img{
   align-items: center;
 }
 
+textarea { 
+  width:90%;
+  max-width:90%;
+  max-height:30%;
+}
+
 .izdelek{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px;
   font-size: small;
   margin: 10px auto;
-  width: 20%;
+  width: 40%;
   padding: 10px;
 }
 

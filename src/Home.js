@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Kategorije from "./Kategorije";
 
 function Home(){

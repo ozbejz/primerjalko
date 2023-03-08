@@ -1,8 +1,15 @@
+import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 
-const AdminPanel = () => {
+const AdminPanel = () => { 
+    const [inputs, setInputs] = useState({});
+    const [link, setLink] = useState([]);
     const [category, setCategory] = useState([]);
+    const [izdelek, setIzdelek] = useState([]);
+    const [uporabnik, setUporabnik] = useState([]);
+    const [update, setUpdate] = useState([]);
+
     useEffect(()=>{
         const getcategory = async()=>{
             const res = await fetch('http://localhost:80/primerjalko-server/kategorije.php');
@@ -10,9 +17,8 @@ const AdminPanel = () => {
             setCategory(getdata);
         }
         getcategory();
-    }, [])
+    }, [update])
 
-    const [izdelek, setIzdelek] = useState([]);
     useEffect(()=>{
         const getizdelek = async()=>{
             const res = await fetch('http://localhost:80/primerjalko-server/izdelki.php');
@@ -20,9 +26,8 @@ const AdminPanel = () => {
             setIzdelek(getdata);
         }
         getizdelek();
-    }, [])
-
-    const [uporabnik, setUporabnik] = useState([]);
+    }, [update])
+    
     useEffect(()=>{
         const getuporabnik = async()=>{
             const res = await fetch('http://localhost:80/primerjalko-server/uporabniki.php');
@@ -30,7 +35,36 @@ const AdminPanel = () => {
             setUporabnik(getdata);
         }
         getuporabnik();
-    }, [])
+    }, [update])
+
+    const handleChange = async (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        if(event.target.tagName === 'SELECT')
+            setUpdate(1);
+        setInputs(values => ({...values, [name]: value}));
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setUpdate(Math.random());
+
+        axios.post(link, inputs)
+          .then(function(response){
+            console.log(response.data);
+            if(response.data['status'] === 1){
+                alert("uspelo");
+            }
+            else
+                alert("ni uspelo");
+        });
+
+        for (let i = 0; i < e.target.length; i++) {
+            e.target.elements[i].value = '';
+        }
+
+        e.target.elements[0].focus();
+    }
 
     return (
         <div className="admin">
@@ -38,52 +72,56 @@ const AdminPanel = () => {
             <br/>
             <div className="adminform">
                 <h3>Vnesi kategorijo</h3>
-                <form method="post" action="http://localhost:80/primerjalko-server/dodaj-kategorijo.php">
-                    Naziv<br/><input type="text" name="naziv"required></input><br/>
-                    Opis<br/><input type="text" name="opis" required></input><br/>
-                    <input type="submit" value="Vnesi"></input>
+                <form onSubmit={handleSubmit}>
+                    Naziv<br/><input type="text" name="naziv" required onChange={ handleChange}></input><br/>
+                    Opis<br/><textarea id="opis" name="opis" rows="5" cols="20" onChange={handleChange}></textarea><br/>
+                    <input onClick={ (e)=>{setLink('http://localhost:80/primerjalko-server/dodaj-kategorijo.php')}} type="submit" value="Vnesi"></input>
                 </form>
             </div>
             <br/>
             <div className="adminform">
                 <h3>Vnesi izdelek</h3>
-                <form method="post" action="http://localhost:80/primerjalko-server/dodaj-izdelek.php">
-                    Naziv<br/><input type="text" name="naziv"required></input><br/>
-                    Opis<br/><input type="text" name="opis" required></input><br/>
-                    Znamka<br/><input type="text" name="znamka" required></input><br/>
-                    Kategorija: <select name="kategorija" id="kategorija">
+                <form onSubmit={handleSubmit}>
+                    Naziv<br/><input type="text" name="naziv"required onChange={ handleChange}></input><br/>
+                    Opis<br/><textarea id="opis" name="opis" rows="5" cols="20" onChange={handleChange}></textarea><br/>
+                    Znamka<br/><input type="text" name="znamka" required onChange={ handleChange}></input><br/>
+                    Kategorija: <select name="kategorija" id="kategorija" onClick={handleChange}>
+                        <option hidden name=""></option>
                         {category.map((cat)=>(
-                            <option key={cat.IdKategorija} value={cat.IdKategorija}>{cat.naziv}</option>
+                            <option name="kategorija" key={cat.IdKategorija} value={cat.IdKategorija}>{cat.naziv}</option>
                         ))}
                     </select><br/>
-                    <input type="submit" value="Vnesi"></input>
+                    <input onClick={ (e)=>setLink('http://localhost:80/primerjalko-server/dodaj-izdelek.php') } type="submit" value="Vnesi"></input>
                 </form>
             </div>
             <br/>
             <div className="adminform">
                 <h3>Vnesi trgovino</h3>
-                <form method="post" action="http://localhost:80/primerjalko-server/dodaj-trgovino.php">
-                    Izdelek: <select name="izdelek" id="izdelek">
+                <form onSubmit={handleSubmit}>
+                    Izdelek: <select name="izdelek" id="izdelek" onClick={handleChange}>
+                        <option hidden name=""></option>
                         {izdelek.map((izd)=>(
-                            <option key={izd.IdIzdelek} value={izd.IdIzdelek}>{izd.naziv}</option>
+                            <option defaultValue={izd.IdIzdelek} key={izd.IdIzdelek} value={izd.IdIzdelek}>{izd.naziv}</option>
                         ))}
                     </select><br/>
-                    Ime trgovine<br/><input type="text" name="ime"required></input><br/>
-                    Link do izdelka<br/><input type="text" name="link" required></input><br/>
-                    Cena izdelka<br/><input type="text" name="cena" required></input><br/>
-                    <input type="submit" value="Vnesi"></input>
+                    Ime trgovine<br/><input type="text" name="ime"required onChange={ handleChange}></input><br/>
+                    Link do izdelka<br/><input type="text" name="link" required onChange={ handleChange}></input><br/>
+                    Cena izdelka<br/><input type="text" name="cena" required pattern="[0-9]+[\.][0-9]{2}"
+                    title="ceno vnesite na dve decimalni mesti z piko" onChange={ handleChange}></input><br/>
+                    <input onClick={ (e)=>setLink('http://localhost:80/primerjalko-server/dodaj-trgovino.php') } type="submit" value="Vnesi"></input>
                 </form>
             </div>
             <br/>
             <div className="adminform">
                 <h3>Bannaj uporabnika</h3>
-                <form method="post" action="http://localhost:80/primerjalko-server/spremeni-aktivnost.php">
-                    Uporabnik: <select name="uporabnik" id="uporabnik">
+                <form onSubmit={handleSubmit}>
+                    Uporabnik: <select name="uporabnik" id="uporabnik" onClick={ handleChange}>
+                        <option hidden name=""></option>
                         {uporabnik.map((upo)=>(
-                            <option key={upo.Id} value={upo.Id}>{upo.ime}, aktiven: {upo.aktiven}</option>
+                            <option defaultValue={upo.Id} key={upo.Id} value={upo.Id}>{upo.ime}, aktiven: {upo.aktiven}</option>
                         ))}
                     </select><br/>
-                    <input type="submit" value="Bannaj/Unbannaj"></input>
+                    <input onClick={ (e)=>setLink('http://localhost:80/primerjalko-server/spremeni-aktivnost.php') } type="submit" value="Bannaj/Unbannaj"></input>
                 </form>
             </div>
         </div>

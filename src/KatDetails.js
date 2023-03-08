@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Kategorije from "./Kategorije";
 
 const KatDetails = () => {
-  {/* Bere podatke iz json pod. baze, odvisno na katero kategorijo smo kliknili*/}
     const { id } = useParams();
     const [izdelki, setIzdelki] = useState(null);
     let link = 'http://localhost:80/primerjalko-server/izdelki.php';
