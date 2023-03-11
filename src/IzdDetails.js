@@ -84,8 +84,7 @@ const preveri = (e) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   let data = {["komentar"]: e.target[0].value, ["vrednost"]: e.target[2].value, ["IdIzdelek"]: e.target[1].value};
-  axios.defaults.withCredentials = true;
-  axios.post("http://localhost:80/primerjalko-server/dodaj-komentar.php", data)
+  axios.post("http://localhost:80/primerjalko-server/dodaj-komentar.php", data, {withCredentials: true})
     .then(function(response){
       console.log(response.data);
   });
