@@ -9,12 +9,26 @@ const IzdDetails = () => {
   const [izdelek, setIzdelek] = useState(null);
   const [ocene, setOcene] = useState(null);
   const [trgovine, setTrgovine] = useState(null);
-  
+  const [prijavljen, setPrijavljen] = useState(false);
+  const [update, setUpdate] = useState([]);
+
   let linkIzd = 'http://localhost:80/primerjalko-server/getizdelek.php';
 
   let linkTrg = 'http://localhost:80/primerjalko-server/trgovine.php';
 
   let linkOce = 'http://localhost:80/primerjalko-server/ocene.php';
+
+  useEffect(() => {
+      let data = {};
+      const getprijavljen = async()=>{
+          axios.post("http://localhost:80/primerjalko-server/prijavljen.php", data, {withCredentials: true})
+              .then(function(response){
+              console.log(response.data);
+              setPrijavljen(response.data);
+          });
+      }
+      getprijavljen();
+  }, []);
 
   useEffect(() => {
       const getizdelek = async()=>{
@@ -51,7 +65,7 @@ const IzdDetails = () => {
         setOcene(getdata);
       }
       getocena();
-  }, [id]);
+  }, [update]);
   
   useEffect(() => {
     const gettrgovina = async()=>{
@@ -84,11 +98,15 @@ const preveri = (e) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   let data = {["komentar"]: e.target[0].value, ["vrednost"]: e.target[2].value, ["IdIzdelek"]: e.target[1].value};
-  console.log(document.cookie);
   axios.post("http://localhost:80/primerjalko-server/dodaj-komentar.php", data, {withCredentials: true})
     .then(function(response){
       console.log(response.data);
+      setUpdate(Math.random());
   });
+  
+  for (let i = 0; i < e.target.length; i++) {
+    e.target.elements[i].value = '';
+}
 }
 
 return (
@@ -117,7 +135,8 @@ return (
           </div>
       ))}
 
-      <div className="adminform">
+      {prijavljen.aktiven ? (
+              <div className="komentar">
           <form onSubmit={preveri}>
               dodaj oceno: <ReactStars size = {40} onChange={ratingChanged}/>
               dodaj komentar: <br/><textarea id="komentar" name="komentar" rows="5" cols="20"></textarea><br/>
@@ -126,6 +145,10 @@ return (
               <input type="submit" name ="dodaj" value="dodaj" />
           </form>
       </div>
+      ) : (
+        <div className="komentar">Za komentiranje se <a className="visible" href="/prijava">prijavite</a></div>
+      )}
+
   </div>
   );
 }

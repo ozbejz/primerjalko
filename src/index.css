@@ -26,6 +26,7 @@ h2{
 
 h3{
   text-align: center;
+  margin: 10px;
 }
 
 h4{
@@ -134,12 +135,31 @@ form {
   border: 2px solid black;
   border-radius: 10px;
   width: 500px;
-  max-width: 64em;
-  margin: auto;
   background-color: rgb(226, 216, 216);
+  margin: 10px;
+  padding: 10px;
+  
+}
+
+.admin{
+  display: flex;
+  flex-direction: row;
 }
 
 .visible{
   text-decoration: none;
   color: rgb(214, 111, 111);
+}
+
+.komentar{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 64em;
+  margin: auto;
+  background-color: rgb(226, 216, 216);
+}
+
+.kategorije{
+  padding: 10px;
 }

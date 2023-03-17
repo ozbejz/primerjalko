@@ -11,26 +11,26 @@ import AdminPanel from "./AdminPanel";
 import IzdDetails from "./IzdDetails";
 import NotFound from "./NotFound";
 import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Odjava from './Odjava';
 
 function App() {
-    /*
+    
     const [prijavljen, setPrijavljen] = useState(false);
     useEffect(() => {
+        let data = {};
         const getprijavljen = async()=>{
-            let req = new Request("http://localhost:80/primerjalko-server/prijavljen.php", {
-            method: 'POST',
+            axios.post("http://localhost:80/primerjalko-server/prijavljen.php", data, {withCredentials: true})
+                .then(function(response){
+                setPrijavljen(response.data);
             });
-            const res = await fetch(req);
-            const getdata = await res.json();
-            setPrijavljen(getdata);
-            console.log(getdata);
         }
         getprijavljen();
-    }, []);*/
+    }, []);
+
   return (
       <Router>
         <Navbar></Navbar>
-            
         <Switch>
         <Route exact path="/">
             <Home></Home>
@@ -44,22 +44,27 @@ function App() {
         <Route path="/prijava">
             <Prijava></Prijava>
         </Route>
+        <Route path="/odjava">
+            <Odjava></Odjava>
+        </Route>
         <Route path="/uspesna-registracija">
             <RegUspensa></RegUspensa>
         </Route>
         <Route path="/uspesna-prijava">
             <PrijavaUspesna></PrijavaUspesna>
         </Route>
-        <Route path="/admin-panel">
-            <AdminPanel></AdminPanel>
-        </Route>
         <Route path="/izdelki/:id">
             <IzdDetails></IzdDetails>
         </Route>
-        <Route path="*">
+        {prijavljen.je_admin ?
+            <Route path="/admin-panel">
+                <AdminPanel></AdminPanel>
+            </Route>
+            : null
+        }
+        <Route path="/*">
             <NotFound></NotFound>
         </Route>
-
         </Switch>
     </Router>
   );

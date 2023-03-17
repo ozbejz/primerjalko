@@ -67,9 +67,8 @@ const AdminPanel = () => {
     }
 
     return (
+        <div><h2>Nadzorna plosca</h2><br/>
         <div className="admin">
-            <h2>Nadzorna plosca</h2>
-            <br/>
             <div className="adminform">
                 <h3>Vnesi kategorijo</h3>
                 <form onSubmit={handleSubmit}>
@@ -78,7 +77,6 @@ const AdminPanel = () => {
                     <input onClick={ (e)=>{setLink('http://localhost:80/primerjalko-server/dodaj-kategorijo.php')}} type="submit" value="Vnesi"></input>
                 </form>
             </div>
-            <br/>
             <div className="adminform">
                 <h3>Vnesi izdelek</h3>
                 <form onSubmit={handleSubmit}>
@@ -94,7 +92,6 @@ const AdminPanel = () => {
                     <input onClick={ (e)=>setLink('http://localhost:80/primerjalko-server/dodaj-izdelek.php') } type="submit" value="Vnesi"></input>
                 </form>
             </div>
-            <br/>
             <div className="adminform">
                 <h3>Vnesi trgovino</h3>
                 <form onSubmit={handleSubmit}>
@@ -111,7 +108,6 @@ const AdminPanel = () => {
                     <input onClick={ (e)=>setLink('http://localhost:80/primerjalko-server/dodaj-trgovino.php') } type="submit" value="Vnesi"></input>
                 </form>
             </div>
-            <br/>
             <div className="adminform">
                 <h3>Bannaj uporabnika</h3>
                 <form onSubmit={handleSubmit}>
@@ -124,6 +120,7 @@ const AdminPanel = () => {
                     <input onClick={ (e)=>setLink('http://localhost:80/primerjalko-server/spremeni-aktivnost.php') } type="submit" value="Bannaj/Unbannaj"></input>
                 </form>
             </div>
+        </div>
         </div>
     );
 }

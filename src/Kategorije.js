@@ -13,7 +13,7 @@ const Kategorije = () =>{
         getcategory();
     }, [])
     return (
-      <nav className="Kategorije">
+      <nav className="kategorije">
         <div className="dropdown">
           <h2 className="kat">Kategorije</h2>
           <div>
