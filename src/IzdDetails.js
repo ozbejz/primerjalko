@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import Kategorije from "./Kategorije";
 import ReactStars from 'react-rating-stars-component';
 import axios from "axios";
+import BrisiKomentar from "./BrisiKomentar";
 
 const IzdDetails = () => {
   const { id } = useParams();
@@ -14,16 +15,15 @@ const IzdDetails = () => {
 
   let linkIzd = 'http://localhost:80/primerjalko-server/getizdelek.php';
 
-  let linkTrg = 'http://localhost:80/primerjalko-server/trgovine.php';
+  let linkTrg = 'http://localhost:80/primerjalko-server/gettrgovine.php';
 
-  let linkOce = 'http://localhost:80/primerjalko-server/ocene.php';
+  let linkOce = 'http://localhost:80/primerjalko-server/getocene.php';
 
   useEffect(() => {
       let data = {};
       const getprijavljen = async()=>{
           axios.post("http://localhost:80/primerjalko-server/prijavljen.php", data, {withCredentials: true})
               .then(function(response){
-              console.log(response.data);
               setPrijavljen(response.data);
           });
       }
@@ -63,6 +63,7 @@ const IzdDetails = () => {
         const res = await fetch(req);
         const getdata = await res.json();
         setOcene(getdata);
+        console.log(getdata);
       }
       getocena();
   }, [update]);
@@ -100,7 +101,6 @@ const handleSubmit = async (e) => {
   let data = {["komentar"]: e.target[0].value, ["vrednost"]: e.target[2].value, ["IdIzdelek"]: e.target[1].value};
   axios.post("http://localhost:80/primerjalko-server/dodaj-komentar.php", data, {withCredentials: true})
     .then(function(response){
-      console.log(response.data);
       setUpdate(Math.random());
   });
   
@@ -132,11 +132,12 @@ return (
             <ReactStars size={40} value = {oce.vrednost} edit = {false} />
             <h4>{oce.komentar}</h4>
             <h4>-{oce.ime}</h4>
+            <BrisiKomentar IdOcena={oce.IdOcena} IdAvtor ={oce.Id} IdUporabnik={prijavljen.Id}></BrisiKomentar>
           </div>
       ))}
 
       {prijavljen.aktiven ? (
-              <div className="komentar">
+          <div className="komentar">
           <form onSubmit={preveri}>
               dodaj oceno: <ReactStars size = {40} onChange={ratingChanged}/>
               dodaj komentar: <br/><textarea id="komentar" name="komentar" rows="5" cols="20"></textarea><br/>

@@ -1,12 +1,11 @@
-import axios from "axios";
-import { useEffect } from "react";
 
 const PrijavaUspesna = () => {
     return (
         <div>
-            <h2>Prijava uspesna</h2>
+            <h3>Registracija uspešna, zdaj se lahko 
+            <p><a className="visible" href="/prijava">prijavite</a></p></h3>
         </div>
     );
 }
-
+ 
 export default PrijavaUspesna;

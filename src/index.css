@@ -94,7 +94,7 @@ textarea {
   margin: 1px;
   color: rgb(214, 111, 111);
   border-radius: 5px;
-  text-decoration:none;
+  background-color: rgb(226, 216, 216);
   padding: 10px;
   margin-left: auto;
 }
@@ -162,4 +162,60 @@ form {
 
 .kategorije{
   padding: 10px;
+}
+
+.error{
+  background-color: rgb(214, 146, 146);
+  max-width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.filtriranje{
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: right;
+}
+
+.razvsrscanje{
+  align-items: right;
+}
+
+button{
+  margin: 2px;
+}
+
+.uspelo{
+  background-color: rgb(177, 214, 146);
+  max-width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.results-list{
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px #ddd;
+  border: 10px;
+  max-height: 300px;
+  overflow-y: scroll;
+  position: absolute;
+}
+
+.search-result {
+  padding: 10px 20px;
+  background-color: #ddd;
+}
+
+.search-bar-container{
+  float: right;
+}
+
+.search-result:hover {
+  background-color: rgb(226, 216, 216);
 }

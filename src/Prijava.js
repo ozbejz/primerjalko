@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-
+/*
 const Prijava = () => {
     return ( 
         <div id="prijava">
@@ -14,10 +14,10 @@ const Prijava = () => {
         </div>
     );
 }
-/*
-
+*/
 const Prijava = () => {
     const [inputs, setInputs] = useState({});
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = async (event) => {
         const name = event.target.name;
@@ -28,13 +28,17 @@ const Prijava = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
        
-
-        axios.post('http://localhost:80/primerjalko-server/process-prijava.php', inputs)
+        axios.post('http://localhost:80/primerjalko-server/process-prijava.php', inputs, {withCredentials: true})
           .then(function(response){
-            console.log(response.data);
+            if(response.data["status"]===1){
+                window.location.href = "http://localhost:3000/";
+            }
+            else{
+                setErrorMessage('Prijava neuspešna');
+            }
         });
+    }
     
-}
 
     return ( 
         <div id="prijava">
@@ -43,10 +47,13 @@ const Prijava = () => {
                 Geslo<br/><input type="password" name='geslo' required onChange={ handleChange}></input><br/>
                 <input type="submit" value="Prijavi se"></input>
             </form>
+            {errorMessage && (
+                <h4 className="error"> {errorMessage} </h4>
+            )}
             <div>Nimate racuna? <a className="visible" href="/registracija">Registrirajte se</a></div>
             
         </div>
     );
 }
-*/
+
 export default Prijava;
