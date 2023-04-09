@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 const Kategorije = () =>{
   const [category, setCategory] = useState([]);
-    useEffect(()=>{
-        const getcategory = async()=>{
-            const res = await fetch('http://localhost:80/primerjalko-server/kategorije.php');
-            const getdata = await res.json();
-            setCategory(getdata);
-        }
-        getcategory();
-    }, [])
-    return (
-      <nav className="kategorije">
-        <div className="dropdown">
-          <h2 className="kat">Kategorije</h2>
+  useEffect(()=>{
+      const getcategory = async()=>{
+          const res = await fetch('http://localhost:80/primerjalko-server/kategorije.php');
+          const getdata = await res.json();
+          setCategory(getdata);
+      }
+      getcategory();
+  }, [])
+  return (
+    <nav className="kategorije">
+      <div className="dropdown">
+        <h2 className="kat">Kategorije</h2>
           <div>
               {category.map((cat)=>(
                   <div key={cat.IdKategorija}>
@@ -25,9 +25,9 @@ const Kategorije = () =>{
                   </div>
               ))}
           </div>
-        </div>
-      </nav>
-    );
-  }
+      </div>
+    </nav>
+  );
+}
   
 export default Kategorije;

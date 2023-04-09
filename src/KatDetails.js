@@ -95,73 +95,70 @@ const KatDetails = () => {
   }
 
   const razvrsti = (e) =>{
-    console.log(e.target.value);
-    
-    
     switch (e.target.value) {
       case 'ocenjeni':
-          setIzdelki([...izdelki].sort((a,b)=>{
-            if (a.vrednost > b.vrednost) {
-              return -1;
-            }
-            if (a.vrednost < b.vrednost) {
-              return 1;
-            }
-            return 0;
-          }));
-          setFiltrirani([...filtrirani].sort((a,b)=>{
-            if (a.vrednost > b.vrednost) {
-              return -1;
-            }
-            if (a.vrednost < b.vrednost) {
-              return 1;
-            }
-            return 0;
-          }));
-          break;
-        case 'drazji':
-          setIzdelki([...izdelki].sort((a,b)=>{
-            if (a.cena > b.cena) {
-              return -1;
-            }
-            if (a.cena < b.cena) {
-              return 1;
-            }
-            return 0;
-          }));
-          setFiltrirani([...filtrirani].sort((a,b)=>{
-            if (a.cena > b.cena) {
-              return -1;
-            }
-            if (a.cena < b.cena) {
-              return 1;
-            }
-            return 0;
-          }));
-          break;
-        case 'cenejsi':
-          setIzdelki([...izdelki].sort((a,b)=>{
-            if (a.cena < b.cena) {
-              return -1;
-            }
-            if (a.cena > b.cena) {
-              return 1;
-            }
-            return 0;
-          }));
-          setFiltrirani([...filtrirani].sort((a,b)=>{
-            if (a.cena < b.cena) {
-              return -1;
-            }
-            if (a.cena > b.cena) {
-              return 1;
-            }
-            return 0;
-          }));
-          break;
-        default:
-          break;
-      }
+        setIzdelki([...izdelki].sort((a,b)=>{
+          if (a.vrednost > b.vrednost) {
+            return -1;
+          }
+          if (a.vrednost < b.vrednost) {
+            return 1;
+          }
+          return 0;
+        }));
+        setFiltrirani([...filtrirani].sort((a,b)=>{
+          if (a.vrednost > b.vrednost) {
+            return -1;
+          }
+          if (a.vrednost < b.vrednost) {
+            return 1;
+          }
+          return 0;
+        }));
+        break;
+      case 'drazji':
+        setIzdelki([...izdelki].sort((a,b)=>{
+          if (a.cena > b.cena) {
+            return -1;
+          }
+          if (a.cena < b.cena) {
+            return 1;
+          }
+          return 0;
+        }));
+        setFiltrirani([...filtrirani].sort((a,b)=>{
+          if (a.cena > b.cena) {
+            return -1;
+          }
+          if (a.cena < b.cena) {
+            return 1;
+          }
+          return 0;
+        }));
+        break;
+      case 'cenejsi':
+        setIzdelki([...izdelki].sort((a,b)=>{
+          if (a.cena < b.cena) {
+            return -1;
+          }
+          if (a.cena > b.cena) {
+            return 1;
+          }
+          return 0;
+        }));
+        setFiltrirani([...filtrirani].sort((a,b)=>{
+          if (a.cena < b.cena) {
+            return -1;
+          }
+          if (a.cena > b.cena) {
+            return 1;
+          }
+          return 0;
+        }));
+        break;
+      default:
+        break;
+    }
   }
 
   return (

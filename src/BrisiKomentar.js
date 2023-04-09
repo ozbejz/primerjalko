@@ -14,10 +14,18 @@ const BrisiKomentar = (props) => {
         });
     }
 
+    if(props.jeAdmin === 1){
+        return (
+            <div>
+                <button onClick={brisi}>briši</button>
+            </div>
+        );
+    }
+
     if(props.IdUporabnik === props.IdAvtor){
         return (
             <div>
-                <button onClick={brisi}>brisi</button>
+                <button onClick={brisi}>briši</button>
             </div>
         );
     }

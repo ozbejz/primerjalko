@@ -219,3 +219,7 @@ button{
 .search-result:hover {
   background-color: rgb(226, 216, 216);
 }
+
+.prijava{
+  width: 25%;
+}

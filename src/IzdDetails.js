@@ -130,9 +130,9 @@ return (
       {ocene && ocene.map((oce)=>(
           <div className="izdelek" key={oce.IdOcena}>
             <ReactStars size={40} value = {oce.vrednost} edit = {false} />
-            <h4>{oce.komentar}</h4>
+            <div>{oce.komentar}</div>
             <h4>-{oce.ime}</h4>
-            <BrisiKomentar IdOcena={oce.IdOcena} IdAvtor ={oce.Id} IdUporabnik={prijavljen.Id}></BrisiKomentar>
+            <BrisiKomentar IdOcena={oce.IdOcena} IdAvtor ={oce.Id} IdUporabnik={prijavljen.Id} jeAdmin={prijavljen.je_admin}></BrisiKomentar>
           </div>
       ))}
 
@@ -140,7 +140,7 @@ return (
           <div className="komentar">
           <form onSubmit={preveri}>
               dodaj oceno: <ReactStars size = {40} onChange={ratingChanged}/>
-              dodaj komentar: <br/><textarea id="komentar" name="komentar" rows="5" cols="20"></textarea><br/>
+              dodaj komentar: <br/><textarea id="komentar" name="komentar" rows="5" cols="20" maxLength={100}></textarea><br/>
               <input type="hidden" name="IdIzdelek" value={id}/>
               <input type="hidden" name="vrednost" value={ocena} />
               <input type="submit" name ="dodaj" value="dodaj" />

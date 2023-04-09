@@ -43,8 +43,8 @@ const Prijava = () => {
     return ( 
         <div id="prijava">
             <form onSubmit={handleSubmit}>
-                Email<br/><input type="text" name='email' required onChange={ handleChange}></input><br/>
-                Geslo<br/><input type="password" name='geslo' required onChange={ handleChange}></input><br/>
+                Email<br/><input className="prijava" type="text" name='email' required onChange={ handleChange}></input><br/>
+                Geslo<br/><input className="prijava" type="password" name='geslo' required onChange={ handleChange}></input><br/>
                 <input type="submit" value="Prijavi se"></input>
             </form>
             {errorMessage && (

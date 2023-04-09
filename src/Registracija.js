@@ -35,10 +35,10 @@ const Registracija = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                Ime<br/><input type="text" name="ime" required onChange={ handleChange}></input><br/>
-                Email<br/><input type="text" name="email" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required onChange={ handleChange}></input><br/>
-                Geslo<br/><input type="password" name="geslo" minLength={5} required onChange={ handleChange}></input><br/>
-                še enkrat vpisite geslo<br/><input type="password" name="preveri_geslo" required onChange={ handleChange}></input><br/>
+                Ime<br/><input className="prijava" type="text" name="ime" required onChange={ handleChange}></input><br/>
+                Email<br/><input className="prijava" type="text" name="email" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required onChange={ handleChange}></input><br/>
+                Geslo<br/><input className="prijava" type="password" name="geslo" minLength={5} required onChange={ handleChange}></input><br/>
+                še enkrat vpisite geslo<br/><input className="prijava" type="password" name="preveri_geslo" required onChange={ handleChange}></input><br/>
                 <input type="submit" value="Postani uporabnik"></input>
             </form>
             {errorMessage && (
