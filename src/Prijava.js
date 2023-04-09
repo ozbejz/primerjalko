@@ -31,7 +31,7 @@ const Prijava = () => {
         axios.post('http://localhost:80/primerjalko-server/process-prijava.php', inputs, {withCredentials: true})
           .then(function(response){
             if(response.data["status"]===1){
-                window.location.href = "https://primerjalko.vercel.app/";
+                //window.location.href = "https://primerjalko.vercel.app/";
             }
             else{
                 setErrorMessage('Prijava neuspešna');
