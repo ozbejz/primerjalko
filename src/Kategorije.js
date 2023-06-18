@@ -19,7 +19,7 @@ const Kategorije = () =>{
           <div>
               {category.map((cat)=>(
                   <div key={cat.IdKategorija}>
-                    <Link to={`/kategorije/${cat.IdKategorija}`}>
+                    <Link to={`/primerjalko/kategorije/${cat.IdKategorija}`}>
                       <h3>{cat.naziv}</h3>
                     </Link>
                   </div>

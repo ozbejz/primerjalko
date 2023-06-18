@@ -119,14 +119,16 @@ return (
             <div>{izd.opis}</div>
           </div>
       ))}
-
+      <br></br>
+      <h3>Trgovine</h3>
       {trgovine && trgovine.map((trg)=>(
           <div className="izdelek" key={trg.IdTrgovina}>
             <h4> <a className="visible" href= {trg.link}>{trg.ime}</a></h4>
             <h4>{trg.cena} €</h4>
           </div>
       ))}
-
+      <br></br>
+      <h3>Mnenja</h3>
       {ocene && ocene.map((oce)=>(
           <div className="izdelek" key={oce.IdOcena}>
             <ReactStars size={40} value = {oce.vrednost} edit = {false} />
@@ -147,7 +149,7 @@ return (
           </form>
       </div>
       ) : (
-        <div className="komentar">Za komentiranje se <a className="visible" href="/prijava">prijavite</a></div>
+        <div className="komentar">Za komentiranje se <a className="visible" href="/primerjalko/prijava">prijavite</a></div>
       )}
 
   </div>

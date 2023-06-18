@@ -22,18 +22,18 @@ const Navbar = () =>{
 
   return (
     <nav className="Navbar">
-      <h1> <Link to = '/' className="nov">Primerjalko</Link></h1>
+      <h1> <Link to = '/primerjalko/' className="nov">Primerjalko</Link></h1>
       <Search></Search>
       
       {prijavljen.je_admin ?
-        <Link to='/admin-panel' className="nov">Nadzorna plošča</Link>
+        <Link to='/primerjalko/admin-panel' className="nov">Nadzorna plošča</Link>
           : <></>
       }
       
       <div className="nov">
         {prijavljen.aktiven ?
-        <Link to='/odjava' className="nov">Odjava</Link>
-          : <Link to='/prijava' className="nov">Prijava</Link>
+        <Link to='/primerjalko/odjava' className="nov">Odjava</Link>
+          : <Link to='/primerjalko/prijava' className="nov">Prijava</Link>
         }
       </div>
     </nav>

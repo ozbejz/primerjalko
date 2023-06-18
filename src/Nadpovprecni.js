@@ -19,7 +19,7 @@ const Nadpovprecni = () => {
             <h2>Najbolje ocenjeni izdelki</h2>
             {izdelki && izdelki.map((izd)=>(
             <div className="izdelek" key={izd.IdIzdelek}>
-                <Link to={`/izdelki/${izd.IdIzdelek}`}>
+                <Link to={`/primerjalko/izdelki/${izd.IdIzdelek}`}>
                 
                 <h4>{izd.naziv} </h4>
                 <ReactStars value={izd.vrednost} isHalf={true} edit={false} size = {30} />

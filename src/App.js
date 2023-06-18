@@ -32,37 +32,37 @@ function App() {
       <Router>
         <Navbar></Navbar>
         <Switch>
-        <Route exact path="/">
+        <Route exact path="/primerjalko/">
             <Home></Home>
         </Route>
-        <Route path="/kategorije/:id">
+        <Route path="/primerjalko/kategorije/:id">
             <KatDetails></KatDetails>
         </Route>
-        <Route path="/registracija">
+        <Route path="/primerjalko/registracija">
             <Registracija/>
         </Route>
-        <Route path="/prijava">
+        <Route path="/primerjalko/prijava">
             <Prijava></Prijava>
         </Route>
-        <Route path="/odjava">
+        <Route path="/primerjalko/odjava">
             <Odjava></Odjava>
         </Route>
-        <Route path="/uspesna-registracija">
+        <Route path="/primerjalko/uspesna-registracija">
             <RegUspensa></RegUspensa>
         </Route>
-        <Route path="/uspesna-prijava">
+        <Route path="/primerjalko/uspesna-prijava">
             <PrijavaUspesna></PrijavaUspesna>
         </Route>
-        <Route path="/izdelki/:id">
+        <Route path="/primerjalko/izdelki/:id">
             <IzdDetails></IzdDetails>
         </Route>
         {prijavljen.je_admin ?
-            <Route path="/admin-panel">
+            <Route path="/primerjalko/admin-panel">
                 <AdminPanel></AdminPanel>
             </Route>
             : null
         }
-        <Route path="/*">
+        <Route path="/primerjalko/*">
             <NotFound></NotFound>
         </Route>
         </Switch>

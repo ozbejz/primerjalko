@@ -18,7 +18,7 @@ const Registracija = () => {
           .then(function(response){
             console.log(response.data);
             if(response.data["status"]===1){
-                window.location.href = "http://localhost:3000/prijava";
+                window.location.href = "http://localhost:3000/primerjalko/prijava";
             }
             else if(response.data["status"]===2){
                 setErrorMessage('Gesla se ne ujemata');

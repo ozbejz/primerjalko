@@ -1,8 +1,8 @@
 const Odjava = () => {
     return (
         <div>
-            Se želite odjaviti
-            <form method="post" action="http://localhost:80/primerjalko-server/odjava.php">
+            <form method="post" action="http://localhost:80/primerjalko-server/odjava.php"> 
+            Se želite odjaviti?
                 <input type="submit" value="Da"></input>
             </form>
         </div>

@@ -4,12 +4,12 @@ const SearchResultList = ({result}) => {
     console.log(result);
     return (
         <div className="results-list">
-        
           {result && result.map((izd)=>(
             <div className="search-result" key={izd.naziv}>
-            <Link to={`/izdelki/${izd.IdIzdelek}`}>
+            <Link to={`/primerjalko/izdelki/${izd.IdIzdelek}`}>
               <h4>{izd.naziv}</h4>
             </Link>
+            
             </div>
         ))}
         </div>

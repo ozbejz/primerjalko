@@ -31,7 +31,7 @@ const Prijava = () => {
         axios.post('http://localhost:80/primerjalko-server/process-prijava.php', inputs, {withCredentials: true})
           .then(function(response){
             if(response.data["status"]===1){
-                window.location.href = "http://localhost:3000/";
+                window.location.href = "/primerjalko/";
             }
             else{
                 setErrorMessage('Prijava neuspešna');
@@ -50,7 +50,7 @@ const Prijava = () => {
             {errorMessage && (
                 <h4 className="error"> {errorMessage} </h4>
             )}
-            <div>Nimate racuna? <a className="visible" href="/registracija">Registrirajte se</a></div>
+            <div>Nimate racuna? <a className="visible" href="/primerjalko/registracija">Registrirajte se</a></div>
             
         </div>
     );

@@ -183,7 +183,7 @@ const KatDetails = () => {
       </select></div></div>
       {filtrirani.length !==0 ? (filtrirani.map((izd)=>(
           <div className="izdelek" key={izd.IdIzdelek}>
-            <Link to={`/izdelki/${izd.IdIzdelek}`}>
+            <Link to={`/primerjalko/izdelki/${izd.IdIzdelek}`}>
             <h4>{izd.naziv}</h4>
             <ReactStars value={izd.vrednost} isHalf={true} edit={false} size = {30} />
             <h4>{izd.cena} €</h4>
@@ -192,7 +192,7 @@ const KatDetails = () => {
       ))): (
             izdelki && izdelki.map((izd)=>(
           <div className="izdelek" key={izd.IdIzdelek}>
-            <Link to={`/izdelki/${izd.IdIzdelek}`}>
+            <Link to={`/primerjalko/izdelki/${izd.IdIzdelek}`}>
             <h4>{izd.naziv}</h4>
             <ReactStars value={izd.vrednost} isHalf={true} edit={false} size = {30} />
             <h4>{izd.cena} €</h4>
