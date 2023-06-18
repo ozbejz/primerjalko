@@ -66,7 +66,7 @@ const IzdDetails = () => {
         console.log(getdata);
       }
       getocena();
-  }, [update]);
+  }, [update, id]);
   
   useEffect(() => {
     const gettrgovina = async()=>{
